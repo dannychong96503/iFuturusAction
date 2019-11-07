@@ -22,6 +22,7 @@ public class lodgereportmodel {
     public lodgereportmodel() {
     }
 
+
     public lodgereportmodel(String id, String name, String email, String gender, String complaintDetails, String complaintNotes, String complaintLocation, String complaintCategory, String complaintStatus, String complaintId, String complaintDate, String complaintTime, String photoUrl, String latitude, String longitude) {
         this.id = id;
         this.name = name;
@@ -159,4 +160,6 @@ public class lodgereportmodel {
     public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
+
+
 }

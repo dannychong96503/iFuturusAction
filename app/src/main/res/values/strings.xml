@@ -48,4 +48,47 @@
     <string name="invalid_phone_format">Invalid Phone Format</string>
     <string name="image_clicked">Image Clicked</string>
     <string name="test">Test</string>
+    <string name="report_status">Report Status: </string>
+    <string name="report_category">Report Category</string>
+    <string name="report_location">Report Location</string>
+    <string name="report_notes">Report Notes</string>
+    <string name="complaint_date_and_time">Complaint Date And Time</string>
+    <string name="navigate">Navigate</string>
+    <string name="Send_help">Send Help</string>
+    <string name="Report_type">Report Type:</string>
+    <string name="edit">Edit</string>
+    <string name="Save">Save</string>
+    <string name="userprofile">User Profile</string>
+    <string name="Register">Register</string>
+    <string name="Other">Other</string>
+    <string name="Welcome_To">Welcome To</string>
+    <string-array name="reportstatus">
+        <item>pending</item>
+        <item>processing</item>
+        <item>done</item>
+    </string-array>
+
+    <string name="aboutusdetails">
+        This mobile application is built to allow the user
+        to easily lodge and tracked a complaint report with
+        the focus on a great User Interface and User Experience.
+    </string>
+    <string name="privacy_policy_text">
+        Information We Collect\nWe
+        collect information about you to provide our services.
+        In order for us to best provide our services to you (and to help make
+        it feasible for us to do so), it is essential that we are able to collect
+        and use the information as described in this Policy.</string>
+    <string name="faq_details">
+        What personal data is shared is determined by the Privacy
+        and Cookie Policies of the Sites you use.\nThe
+        personal data shared depends on your interaction with the Sites
+        in the course of your lodge report and application activities.
+        It may include your name, user name, email address,
+        and session activity on the Sites.
+    </string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="faq">Frequently Asked Question</string>
+
+
 </resources>

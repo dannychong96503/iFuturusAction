@@ -13,20 +13,40 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_launcher2"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/ic_launcher2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ReportListActivity"></activity>
+        <activity android:name=".AboutUsActivity"
+            android:label="@string/about_us"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.MainActivity" />
+        </activity>
+        <activity android:name=".ReportEditActivity"></activity>
+        <activity
+            android:name=".ReportActivity"
+            android:parentActivityName=".ReportListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.ReportListActivity" />
+        </activity>
+        <activity
+            android:name=".ReportListActivity"
+            android:label="@string/report_list"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.MainActivity" />
+        </activity>
 
-        <service
-            android:name=".MyFirebaseInstanceIDService">
+        <service android:name=".MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
-
         <service
             android:name=".MyFirebaseMessagingService"
             android:permission="com.google.android.c2dm.permission.SEND">
@@ -36,11 +56,39 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".AlertActivity" />
-        <activity android:name=".UserProfileActivity" />
+        <activity
+            android:name=".AlertActivity"
+            android:label="@string/alert"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.MainActivity" />
+        </activity>
+        <activity
+            android:name=".UserProfileActivity"
+            android:label="@string/userprofile"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.MainActivity" />
+        </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".ChatReportListActivity" />
-        <activity android:name=".ChatReportHistoryActivity" />
+        <activity
+            android:name=".ChatReportListActivity"
+            android:label="@string/chat"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ChatReportHistoryActivity"
+            android:label="@string/chat"
+            android:parentActivityName=".ChatReportListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.ChatReportListActivity" />
+        </activity>
         <activity android:name=".LoginActivity" />
         <activity
             android:name=".MainActivity"

@@ -9,10 +9,6 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_create_account"
-            android:icon="@drawable/ic_create_black_24dp"
-            android:title="@string/create_account" />
-        <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_account_box_black_24dp"
             android:title="@string/profile" />
@@ -26,7 +22,7 @@
             android:title="@string/chat" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="@string/Other">
         <menu>
             <item
                 android:id="@+id/nav_alert"

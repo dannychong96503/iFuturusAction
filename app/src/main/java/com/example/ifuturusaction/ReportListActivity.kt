@@ -34,6 +34,10 @@ class ReportListActivity : AppCompatActivity() {
 
         fetchReportList()
     }
+    companion object {
+        val REPORT_ID_KEY = "REPORT_ID_KEY"
+    }
+
 
     private fun fetchReportList() {
         val ref = FirebaseDatabase.getInstance().getReference("lodgereport")
@@ -59,11 +63,8 @@ class ReportListActivity : AppCompatActivity() {
                     val reportItem = item as ReportItem
 
                     // Start Chat Log Activity
-                    val intent = Intent(view.context, ChatReportHistoryActivity::class.java)
-                    intent.putExtra(
-                        ChatReportListActivity.REPORT_ID_KEY,
-                        reportItem.reportList.complaintId
-                    )
+                    val intent = Intent(view.context, ReportActivity::class.java)
+                    intent.putExtra(REPORT_ID_KEY, reportItem.reportList.complaintId)
                     Log.d(
                         "Report List Activity",
                         "Report ID: ${reportItem.reportList.complaintId}"

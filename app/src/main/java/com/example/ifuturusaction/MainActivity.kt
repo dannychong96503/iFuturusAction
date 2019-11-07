@@ -168,10 +168,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
 
-            R.id.nav_create_account -> {
-                val intent = Intent(this, RegisterActivity::class.java)
-                startActivity(intent)
-            }
             R.id.nav_report_list -> {
                 val intent = Intent(this, ReportListActivity::class.java)
                 startActivity(intent)
@@ -179,6 +175,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.nav_alert -> {
                 val intent = Intent(this, AlertActivity::class.java)
+                startActivity(intent)
+            }
+
+            R.id.nav_about_us -> {
+                val intent = Intent(this, AboutUsActivity::class.java)
                 startActivity(intent)
             }
         }
