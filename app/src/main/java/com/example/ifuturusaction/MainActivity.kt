@@ -172,6 +172,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 val intent = Intent(this, ReportListActivity::class.java)
                 startActivity(intent)
             }
+            R.id.nav_create_id -> {
+                val intent = Intent(this, RegisterActivity::class.java)
+                startActivity(intent)
+            }
 
             R.id.nav_alert -> {
                 val intent = Intent(this, AlertActivity::class.java)
@@ -180,6 +184,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.nav_about_us -> {
                 val intent = Intent(this, AboutUsActivity::class.java)
+                startActivity(intent)
+            }
+            R.id.nav_feedback -> {
+                val intent = Intent(this, FeedbackActivity::class.java)
                 startActivity(intent)
             }
         }

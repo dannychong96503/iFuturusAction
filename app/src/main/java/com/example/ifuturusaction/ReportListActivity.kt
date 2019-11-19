@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.ifuturusaction.model.lodgereportmodel
@@ -31,6 +32,13 @@ class ReportListActivity : AppCompatActivity() {
 
         report_list_view.layoutManager = LinearLayoutManager(this)
 
+        val adapter = ArrayAdapter.createFromResource(
+            this,
+            R.array.reportstatus,
+            android.R.layout.simple_spinner_item
+        )
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinner?.setAdapter(adapter)
 
         fetchReportList()
     }

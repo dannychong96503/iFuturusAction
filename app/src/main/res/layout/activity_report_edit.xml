@@ -37,23 +37,24 @@
         android:layout_height="110dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.003"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reportDetailss1"
-        app:layout_constraintVertical_bias="0.064"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.133"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/reportStatusUI1"
         android:layout_width="96dp"
         android:layout_height="20dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="136dp"
+        android:layout_marginTop="92dp"
         android:text="@string/report_status"
         android:textSize="14dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reportDetailss1" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/complaintDateUI1"
@@ -198,12 +199,12 @@
 
     <Spinner
         android:id="@+id/report_status_list1"
-        android:layout_width="127dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="151dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="44dp"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toEndOf="@+id/reportStatusUI1"
         app:layout_constraintTop_toBottomOf="@+id/reportDetailss1" />
 

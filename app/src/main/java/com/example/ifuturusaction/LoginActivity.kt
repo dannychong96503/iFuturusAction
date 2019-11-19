@@ -67,7 +67,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
         // Declare Buttons Click Listener
         findViewById<View>(R.id.button_login).setOnClickListener(this)
-        findViewById<View>(R.id.button_sign_up).setOnClickListener(this)
         findViewById<View>(R.id.button_cancel).setOnClickListener(this)
 
         // Assign Text Input Layout to XML Layout
@@ -217,10 +216,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             R.id.button_login -> {
                 loginFuntion()
             }
-            R.id.button_sign_up -> {
-                val intent = Intent(this, RegisterActivity::class.java)
-                startActivity(intent)
-            }
+
             R.id.button_cancel -> {
                 // Perform Cancel Intent
                 // means Exit the App

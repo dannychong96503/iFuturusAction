@@ -18,14 +18,42 @@
         android:roundIcon="@drawable/ic_launcher2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AboutUsActivity"
+
+        <activity android:name=".FeedbackActivity"
+            android:label="@string/feedback"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.MainActivity" />
+        </activity>
+        <activity android:name=".AlertActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.MainActivity" />
+        </activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".AboutUsActivity"
             android:label="@string/about_us"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ifuturusaction.MainActivity" />
         </activity>
-        <activity android:name=".ReportEditActivity"></activity>
+        <activity android:name=".ReportEditActivity" />
         <activity
             android:name=".ReportActivity"
             android:parentActivityName=".ReportListActivity">
@@ -41,29 +69,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ifuturusaction.MainActivity" />
         </activity>
-
-        <service android:name=".MyFirebaseInstanceIDService">
-            <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
-        <service
-            android:name=".MyFirebaseMessagingService"
-            android:permission="com.google.android.c2dm.permission.SEND">
-            <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-            </intent-filter>
-        </service>
-
-        <activity
-            android:name=".AlertActivity"
-            android:label="@string/alert"
-            android:parentActivityName=".MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ifuturusaction.MainActivity" />
-        </activity>
         <activity
             android:name=".UserProfileActivity"
             android:label="@string/userprofile"
@@ -72,7 +77,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ifuturusaction.MainActivity" />
         </activity>
-        <activity android:name=".RegisterActivity" />
+        <activity android:name=".RegisterActivity"
+            android:label="@string/create_account"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.ifuturusaction.MainActivity" />
+        </activity>
         <activity
             android:name=".ChatReportListActivity"
             android:label="@string/chat"

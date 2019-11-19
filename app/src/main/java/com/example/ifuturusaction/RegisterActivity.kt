@@ -49,7 +49,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         // Button Click Listener
         findViewById<View>(R.id.button_sign_up).setOnClickListener(this)
         findViewById<View>(R.id.button_cancel).setOnClickListener(this)
-        findViewById<View>(R.id.button_sign_in).setOnClickListener(this)
+
 
         // Start Auth Instance
         mFirebaseAuth = FirebaseAuth.getInstance()
@@ -126,12 +126,11 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                     if (task.isSuccessful) {
                         Toast.makeText(this@RegisterActivity, resources.getString(R.string.account_create_successful),
                             Toast.LENGTH_SHORT).show()
-                        Toast.makeText(this@RegisterActivity, resources.getString(R.string.login_successful),
-                            Toast.LENGTH_SHORT).show()
-                        val intent = Intent(this@RegisterActivity, MainActivity::class.java)
-                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-                        startActivity(intent)
-                        finish()
+
+                      //  val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                       // startActivity(intent)
+                       // finish()
                     }
                 }
             } else if (task.exception is FirebaseAuthUserCollisionException) {
@@ -152,10 +151,6 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                     mtext_input_username.text!!.toString(),
                     mtext_input_confirm_password.text!!.toString()
                 )
-            }
-            R.id.button_sign_in -> {
-                val intent = Intent(this, LoginActivity::class.java)
-                startActivity(intent)
             }
             R.id.button_cancel -> {
                 val intent = Intent(this, MainActivity::class.java)

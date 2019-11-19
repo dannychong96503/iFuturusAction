@@ -65,7 +65,7 @@
     <string-array name="reportstatus">
         <item>pending</item>
         <item>processing</item>
-        <item>done</item>
+        <item>completed</item>
     </string-array>
 
     <string name="aboutusdetails">
@@ -89,6 +89,7 @@
     </string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="faq">Frequently Asked Question</string>
+    <string name="feedback">Feedback</string>
 
 
 </resources>

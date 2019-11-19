@@ -1,5 +1,7 @@
 package com.example.ifuturusaction.model;
 
+
+
 public class lodgereportmodel {
 
     // Declare Variables
@@ -18,6 +20,8 @@ public class lodgereportmodel {
     private String photoUrl;
     private String latitude;
     private String longitude;
+
+
 
     public lodgereportmodel() {
     }

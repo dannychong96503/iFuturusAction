@@ -82,29 +82,11 @@
         android:textAlignment="center"
         android:textColor="@android:color/white"
         app:cornerRadius="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/button_sign_up"
-        app:layout_constraintStart_toEndOf="@+id/button_sign_up"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2_Password"
-        app:rippleColor="@color/colorSignInRipple" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_sign_up"
-        style="@style/Widget.MaterialComponents.Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/colorPrimary"
-        android:backgroundTint="@color/colorPrimary"
-        android:padding="15dp"
-        android:text="@string/sign_up"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/button_cancel"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_login"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2_Password"
+        app:layout_constraintVertical_bias="0.0"
         app:rippleColor="@color/colorSignInRipple" />
 
     <com.google.android.material.button.MaterialButton
@@ -112,14 +94,16 @@
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:backgroundTint="#47525E"
         android:padding="15dp"
         android:text="@string/quit"
         android:textAlignment="center"
         android:textColor="@android:color/white"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button_sign_up"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_sign_up"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_login"
         app:rippleColor="@color/colorCancelRipple" />
 
 
