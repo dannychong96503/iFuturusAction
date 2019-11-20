@@ -178,7 +178,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             R.id.nav_alert -> {
-                val intent = Intent(this, AlertActivity::class.java)
+                val intent = Intent(this, WebViewActivity::class.java)
                 startActivity(intent)
             }
 

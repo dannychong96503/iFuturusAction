@@ -21,7 +21,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
     // Declare an instance of Firebase Auth
     private var mFirebaseAuth: FirebaseAuth? = null
-
+    private var mFirebaseAuth2: FirebaseAuth? = null
     // Declare TextInputLayout Field
     private var mlabel_username: TextInputLayout? = null
     private var mlabel_password: TextInputLayout? = null
@@ -53,6 +53,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
 
         // Start Auth Instance
         mFirebaseAuth = FirebaseAuth.getInstance()
+
     }
 
     private fun validateSignUpCredentials(): Boolean {
@@ -103,10 +104,10 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         // START create user with email
-        mFirebaseAuth?.createUserWithEmailAndPassword(email, password)?.addOnCompleteListener(this) { task ->
+        mFirebaseAuth2?.createUserWithEmailAndPassword(email, password)?.addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
                 // Sign in success
-                val user = mFirebaseAuth?.getCurrentUser()
+                val user = mFirebaseAuth2?.getCurrentUser()
                 val userid = user!!.uid
 
                 val reference: DatabaseReference
@@ -126,10 +127,11 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                     if (task.isSuccessful) {
                         Toast.makeText(this@RegisterActivity, resources.getString(R.string.account_create_successful),
                             Toast.LENGTH_SHORT).show()
-
-                      //  val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                        mFirebaseAuth2!!.signOut()
+                        //val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                      //  val intent = Intent(this, MainActivity::class.java)
                         //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-                       // startActivity(intent)
+              //          startActivity(intent)
                        // finish()
                     }
                 }

@@ -9,27 +9,13 @@ import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.media.RingtoneManager
 import android.os.Build
-import android.os.Bundle
-import android.text.TextUtils
-import android.util.Log
-import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
-import androidx.databinding.DataBindingUtil
-import com.android.volley.RequestQueue
-import com.android.volley.Response
-import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.Volley
-
-
-import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import kotlinx.android.synthetic.main.activity_main.*
-import org.json.JSONException
-import org.json.JSONObject
 import java.util.*
+
+
 
 class MyFirebaseMessagingService : FirebaseMessagingService() {
 
@@ -38,7 +24,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     override fun onMessageReceived(p0: RemoteMessage?) {
         super.onMessageReceived(p0)
 
-        val intent = Intent(this, AlertActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         val notificationID = Random().nextInt(3000)
 

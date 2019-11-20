@@ -85,6 +85,7 @@ class ReportEditActivity : AppCompatActivity() {
         loadReport()
 
        btnSave1.setOnClickListener({launchUpdate()})
+        notifyUser.setOnClickListener({launchEmail()})
     }
 
     private fun loadReport() {
@@ -155,16 +156,43 @@ class ReportEditActivity : AppCompatActivity() {
             latitude,
             longitude
         )
-
+        if (newComplaintReportStatus=="completed"||newComplaintReportStatus=="processing") {
+                notifyUser.visibility = View.VISIBLE
+        }
         reference.setValue(newUpdatedReport)
             .addOnSuccessListener {
                 Log.d("Update Report", "Successfully saved value to database")
                 Toast.makeText(this, "Report Notes has successfully been updated", Toast.LENGTH_LONG).show()
             }
 
+
+
+    }
+
+
+    private fun launchEmail() {
+
+            val recipient = email?.let { arrayOf<String>(it) }
+
+            val emailIntent = Intent(Intent.ACTION_SEND)
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, recipient)
+            emailIntent.putExtra(
+                Intent.EXTRA_SUBJECT,
+                "Complaint from " + complaintDate
+            )
+
+            emailIntent.putExtra(
+                Intent.EXTRA_TEXT,
+                "The report you summit on " + complaintDate +" "+ complaintTime + " at location: "+complaintLocation+ " is already "+ complaintStatus + "."
+
+            )
+
+
+            emailIntent.type = "message/rfc822"
+            startActivity(Intent.createChooser(emailIntent, "Choose an email client"))
+        }
     }
 
 
 
 
-}

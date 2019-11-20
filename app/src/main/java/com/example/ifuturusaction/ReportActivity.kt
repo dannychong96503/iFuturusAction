@@ -114,6 +114,8 @@ class ReportActivity : AppCompatActivity() {
         btnSendHelp.setOnClickListener({LaunchEmail()})
         btnEdit.setOnClickListener({LaunchEdit()})
 
+
+
     }
 
     private fun loadReport() {
@@ -133,6 +135,11 @@ class ReportActivity : AppCompatActivity() {
                     reportCategory.setText("${reportDetails.complaintCategory}")
                     reportLocation.setText("${reportDetails.complaintLocation}")
                     reportDate.setText("${reportDetails.complaintDate}, ${reportDetails.complaintTime}")
+
+
+                    if(reportStatus.text=="completed"){
+                        btnEdit.visibility = View.GONE
+                    }
 
                     // Assign value to Temporary Variable
                     id = reportDetails.id
