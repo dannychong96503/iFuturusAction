@@ -27,6 +27,7 @@ import android.net.Uri
 import android.view.View
 import android.widget.Button
 import com.bumptech.glide.Glide
+import com.example.ifuturusaction.adapter.viewallreportadapter
 import com.example.ifuturusaction.model.userprofilemodel
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_report.*
@@ -97,7 +98,7 @@ class ReportActivity : AppCompatActivity() {
 
 
 //
-        reportID = intent.getStringExtra(ReportListActivity.REPORT_ID_KEY)
+        reportID = intent.getStringExtra(viewallreportadapter.REPORT_ID_KEY)
         supportActionBar?.title = "Report ID: $reportID"
 
 

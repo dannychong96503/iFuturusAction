@@ -63,6 +63,12 @@
     <string name="Other">Other</string>
     <string name="Welcome_To">Welcome To</string>
     <string-array name="reportstatus">
+    <item>pending</item>
+    <item>processing</item>
+    <item>completed</item>
+</string-array>
+    <string-array name="searchreportstatus">
+        <item>default</item>
         <item>pending</item>
         <item>processing</item>
         <item>completed</item>
@@ -90,6 +96,8 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="faq">Frequently Asked Question</string>
     <string name="feedback">Feedback</string>
+    <string name="view_report">View Report</string>
+    <string name="filter">Filter</string>
 
 
 </resources>

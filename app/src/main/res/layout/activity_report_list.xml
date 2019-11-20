@@ -10,13 +10,19 @@
 
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/report_spinner"
         android:layout_width="315dp"
         android:layout_height="33dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/filter" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/report_list_view"
@@ -25,7 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/filter" />
 
 
 </LinearLayout>

@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="202dp"
+        android:layout_height="232dp"
         android:layout_marginTop="10dp"
         android:baselineAligned="false"
         android:orientation="horizontal"
@@ -20,8 +20,8 @@
 
         <ImageView
             android:id="@+id/reportPicture"
-            android:layout_width="147dp"
-            android:layout_height="171dp"
+            android:layout_width="131dp"
+            android:layout_height="175dp"
             android:layout_gravity="start"
             android:adjustViewBounds="true"
             android:scaleType="centerCrop" />
@@ -29,7 +29,7 @@
 
         <LinearLayout
             android:layout_width="209dp"
-            android:layout_height="181dp"
+            android:layout_height="196dp"
             android:orientation="vertical"
             android:padding="10dp">
 
@@ -53,6 +53,12 @@
                 android:layout_width="199dp"
                 android:layout_height="60dp"
                 android:text="Report ID" />
+
+            <Button
+                android:id="@+id/view_report"
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:text="@string/view_report" />
 
         </LinearLayout>
     </LinearLayout>
