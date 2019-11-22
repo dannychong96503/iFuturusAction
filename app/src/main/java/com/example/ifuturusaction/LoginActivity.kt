@@ -10,14 +10,19 @@ import android.util.Patterns
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.OnCompleteListener
+import com.google.android.gms.tasks.Task
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_login.*
 import java.util.HashMap
 
 class LoginActivity : AppCompatActivity(), View.OnClickListener {
@@ -68,12 +73,16 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         // Declare Buttons Click Listener
         findViewById<View>(R.id.button_login).setOnClickListener(this)
         findViewById<View>(R.id.button_cancel).setOnClickListener(this)
+        findViewById<View>(R.id.btn_forgotPassword).setOnClickListener(this)
+        findViewById<View>(R.id.resetPassword).setOnClickListener(this)
 
         // Assign Text Input Layout to XML Layout
         mtextInputLayout_Username = findViewById(R.id.textInputLayout_Username)
         mtextInputLayout2_Password = findViewById(R.id.textInputLayout2_Password)
 
         mFirebaseAuth = FirebaseAuth.getInstance()
+
+
     }
 
     private fun loginFuntion(){
@@ -216,6 +225,41 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             R.id.button_login -> {
                 loginFuntion()
             }
+            R.id.resetPassword->{
+                val email = email_reset_input.text.toString().trim()
+
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(application, "Enter your registered email", Toast.LENGTH_SHORT).show()
+                    return
+                }
+
+
+                auth.sendPasswordResetEmail(email)
+                    .addOnCompleteListener { task ->
+                        if (task.isSuccessful) {
+                            Toast.makeText(
+                                this@LoginActivity,
+                                "We have sent you instructions to reset your password!",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        } else {
+                            Toast.makeText(
+                                this@LoginActivity,
+                                "Failed to send reset email!",
+                                Toast.LENGTH_SHORT
+                            ).show()
+                        }
+
+
+                    }
+            }
+
+            R.id.btn_forgotPassword->{
+             resetPassword.visibility = View.VISIBLE
+                textInputLayout.visibility=View.VISIBLE
+                email_reset_input.visibility=View.VISIBLE
+
+            }
 
             R.id.button_cancel -> {
                 // Perform Cancel Intent
@@ -247,6 +291,37 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+
+    private fun forgotPasswordFunction() {
+        val email = email_reset_input.text.toString().trim()
+
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(application, "Enter your registered email", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+
+        auth.sendPasswordResetEmail(email)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "We have sent you instructions to reset your password!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    Toast.makeText(
+                        this@LoginActivity,
+                        "Failed to send reset email!, this email has not registered!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+
+            }
+    }
+
+
 
     companion object {
         private const val TAG = "GoogleActivity"

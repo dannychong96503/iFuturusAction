@@ -18,7 +18,9 @@
         android:roundIcon="@drawable/ic_launcher2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WebViewActivity"
+
+        <activity
+            android:name=".WebViewActivity"
             android:label="@string/alert"
             android:parentActivityName=".MainActivity">
             <intent-filter>
@@ -29,7 +31,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ifuturusaction.MainActivity" />
         </activity>
-
         <activity
             android:name=".FeedbackActivity"
             android:label="@string/feedback"

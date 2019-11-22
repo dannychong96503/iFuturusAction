@@ -70,6 +70,8 @@ class ReportEditActivity : AppCompatActivity() {
         setContentView(R.layout.activity_report_edit)
 
         report_status_list = findViewById(R.id.report_status_list1)
+
+
         val adapter = ArrayAdapter.createFromResource(
             this,
             R.array.reportstatus,
@@ -77,7 +79,6 @@ class ReportEditActivity : AppCompatActivity() {
         )
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         report_status_list?.setAdapter(adapter)
-
 
         reportID = intent.getStringExtra(ReportActivity.REPORT_ID_KEY1)
         supportActionBar?.title = "Report ID: $reportID"
@@ -121,8 +122,11 @@ class ReportEditActivity : AppCompatActivity() {
                     photoUrl = reportDetails.photoUrl
                     latitude = reportDetails.latitude
                     longitude = reportDetails.longitude
+
+
                 }
             }
+
 
             override fun onCancelled(p0: DatabaseError) {
                 // Handle Error

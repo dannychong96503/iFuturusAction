@@ -167,7 +167,7 @@ class ReportActivity : AppCompatActivity() {
     }
 
     private fun LaunchEmail() {
-        val recipient = arrayOf<String>("callcentre@dbkl.gov.my")
+        val recipient = arrayOf<String>("dbkltest@gmail.com")
 
         val emailIntent = Intent(Intent.ACTION_SEND)
         emailIntent.putExtra(Intent.EXTRA_EMAIL, recipient)

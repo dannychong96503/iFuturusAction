@@ -1,19 +1,19 @@
 <resources>
     <string name="app_name">iFuturus Action</string>
-    <string name="title_activity_main">iFuturus Action</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_main" translatable="false">iFuturus Action</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="nav_header_title" translatable="false">Android Studio</string>
+    <string name="nav_header_subtitle" translatable="false">android.studio@android.com</string>
+    <string name="nav_header_desc" translatable="false">Navigation header</string>
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_gallery" translatable="false">Gallery</string>
+    <string name="menu_slideshow" translatable="false">Slideshow</string>
+    <string name="menu_tools" translatable="false">Tools</string>
+    <string name="menu_share" translatable="false">Share</string>
+    <string name="menu_send" translatable="false">Send</string>
     <string name="username">User Name</string>
     <string name="your_email_address">Your Email Address</string>
     <string name="password">Password</string>
@@ -47,13 +47,13 @@
     <string name="chat">Chat</string>
     <string name="invalid_phone_format">Invalid Phone Format</string>
     <string name="image_clicked">Image Clicked</string>
-    <string name="test">Test</string>
+    <string name="test" translatable="false">Test</string>
     <string name="report_status">Report Status: </string>
     <string name="report_category">Report Category</string>
     <string name="report_location">Report Location</string>
     <string name="report_notes">Report Notes</string>
     <string name="complaint_date_and_time">Complaint Date And Time</string>
-    <string name="navigate">Navigate</string>
+    <string name="navigate" translatable="false">Navigate</string>
     <string name="Send_help">Send Help</string>
     <string name="Report_type">Report Type:</string>
     <string name="edit">Edit</string>
@@ -67,6 +67,12 @@
         <item>processing</item>
         <item>completed</item>
     </string-array>
+
+    <string-array name="reportstatusprocessing">
+        <item>processing</item>
+        <item>completed</item>
+    </string-array>
+
     <string-array name="searchreportstatus">
         <item>default</item>
         <item>pending</item>
@@ -79,26 +85,20 @@
         to easily lodge and tracked a complaint report with
         the focus on a great User Interface and User Experience.
     </string>
-    <string name="privacy_policy_text">
-        Information We Collect\nWe
-        collect information about you to provide our services.
-        In order for us to best provide our services to you (and to help make
-        it feasible for us to do so), it is essential that we are able to collect
-        and use the information as described in this Policy.</string>
-    <string name="faq_details">
-        What personal data is shared is determined by the Privacy
-        and Cookie Policies of the Sites you use.\nThe
-        personal data shared depends on your interaction with the Sites
-        in the course of your lodge report and application activities.
-        It may include your name, user name, email address,
-        and session activity on the Sites.
-    </string>
+    <string name="privacy_policy_text">"         Information We Collect We         collect information about you to provide our services.         In order for us to best provide our services to you (and to help make         it feasible for us to do so), it is essential that we are able to collect         and use the information as described in this Policy."</string>
+    <string name="faq_details">"         What personal data is shared is determined by the Privacy         and Cookie Policies of the Sites you use. The         personal data shared depends on your interaction with the Sites         in the course of your lodge report and application activities.         It may include your name, user name, email address,         and session activity on the Sites.     "</string>
     <string name="privacy_policy">Privacy Policy</string>
     <string name="faq">Frequently Asked Question</string>
     <string name="feedback">Feedback</string>
     <string name="view_report">View Report</string>
     <string name="filter">Filter</string>
     <string name="update_to_user">Update to user</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="forgot_password">forgot password</string>
+    <string name="lbl_forgot_password">Forgot Password?</string>
+    <string name="forgot_password_msg" translatable="false">We just need your email to recover your password</string>
+    <string name="btn_back">Back</string>
+    <string name="key_in_registered_email">Please Key In Registered Email</string>
 
 
 </resources>

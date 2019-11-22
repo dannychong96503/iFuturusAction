@@ -104,10 +104,10 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         }
 
         // START create user with email
-        mFirebaseAuth2?.createUserWithEmailAndPassword(email, password)?.addOnCompleteListener(this) { task ->
+        mFirebaseAuth?.createUserWithEmailAndPassword(email, password)?.addOnCompleteListener(this) { task ->
             if (task.isSuccessful) {
                 // Sign in success
-                val user = mFirebaseAuth2?.getCurrentUser()
+                val user = mFirebaseAuth?.getCurrentUser()
                 val userid = user!!.uid
 
                 val reference: DatabaseReference
@@ -127,7 +127,7 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
                     if (task.isSuccessful) {
                         Toast.makeText(this@RegisterActivity, resources.getString(R.string.account_create_successful),
                             Toast.LENGTH_SHORT).show()
-                        mFirebaseAuth2!!.signOut()
+                        //mFirebaseAuth!!.signOut()
                         //val intent = Intent(this@RegisterActivity, MainActivity::class.java)
                       //  val intent = Intent(this, MainActivity::class.java)
                         //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
