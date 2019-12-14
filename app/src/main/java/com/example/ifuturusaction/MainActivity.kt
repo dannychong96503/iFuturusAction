@@ -182,10 +182,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent)
             }
 
-            R.id.nav_about_us -> {
-                val intent = Intent(this, AboutUsActivity::class.java)
-                startActivity(intent)
-            }
             R.id.nav_feedback -> {
                 val intent = Intent(this, FeedbackActivity::class.java)
                 startActivity(intent)

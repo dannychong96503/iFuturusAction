@@ -36,10 +36,6 @@
                 android:id="@+id/nav_feedback"
                 android:icon="@drawable/ic_feedback_black_24dp"
                 android:title="@string/feedback" />
-            <item
-                android:id="@+id/nav_about_us"
-                android:icon="@drawable/ic_group_black_24dp"
-                android:title="@string/about_us" />
         </menu>
     </item>
 

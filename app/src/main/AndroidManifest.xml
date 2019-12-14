@@ -62,18 +62,7 @@
             </intent-filter>
         </service>
 
-        <activity
-            android:name=".AboutUsActivity"
-            android:label="@string/about_us"
-            android:parentActivityName=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
 
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.ifuturusaction.MainActivity" />
-        </activity>
         <activity android:name=".ReportEditActivity" />
         <activity
             android:name=".ReportActivity"
